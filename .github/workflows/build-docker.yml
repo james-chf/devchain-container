@@ -18,6 +18,15 @@ jobs:
         ref:
         - "v0.7.1"
         - "092e3bf032a4bf7c5f879d1939a0553ef811b5e5"  # yuji/multitoken
+        - "70adf7987ac1aae10f2447adc363b786723cdf8a"  # eth-bridge-integration
+        ref_fflags:
+        - "default"
+        include:
+        - ref: "70adf7987ac1aae10f2447adc363b786723cdf8a"
+          ref_fflags: "namada_apps/eth-fullnode"
+        exclude:
+        - ref: "70adf7987ac1aae10f2447adc363b786723cdf8a"
+          ref_fflags: "default"
 
     steps:
       - name: Checkout repository
@@ -55,5 +64,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             REF=${{ matrix.ref }}
+            ANOMA_REF_FFLAGS=${{ matrix.ref_fflags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
