@@ -17,7 +17,7 @@ jobs:
       matrix:
         ref:
         - "v0.7.1"
-        - "james/integration/ethbridge-m2e-test"  # eth-bridge-integration m2e branch (using fake Ethereum event endpoint)
+        - "a3cf7350eb490672dd5c32567bef179f529eedfd"  # eth-bridge-integration m2e branch (using fake Ethereum event endpoint)
         - "70adf7987ac1aae10f2447adc363b786723cdf8a"  # eth-bridge-integration
         ref_fflags:
         - "default"
