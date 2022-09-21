@@ -21,12 +21,6 @@ jobs:
         - "25f5283631c387b85f5690bd8b9a7565c0bfc7b8"  # eth-bridge-integration 2022-09-21
         ref_fflags:
         - "default"
-        include:
-        - ref: "70adf7987ac1aae10f2447adc363b786723cdf8a"
-          ref_fflags: "namada_apps/eth-fullnode"
-        exclude:
-        - ref: "70adf7987ac1aae10f2447adc363b786723cdf8a"
-          ref_fflags: "default"
 
     steps:
       - name: Checkout repository
