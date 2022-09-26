@@ -19,7 +19,7 @@ jobs:
           - "v0.7.1"
           - "a3cf7350eb490672dd5c32567bef179f529eedfd" # eth-bridge-integration m2e branch (using fake Ethereum event endpoint)
           - "25f5283631c387b85f5690bd8b9a7565c0bfc7b8" # eth-bridge-integration 2022-09-21
-          - "091852937e298ff5304e6c11fbbf2c3b58c4df2b" # https://github.com/anoma/namada/pull/471 - secp keys for Namada validators/Ethereum bridge
+          - "b2fc5c1ab3586348539a2a0d2360dc6efb03a0c0" # https://github.com/anoma/namada/pull/471 - secp keys for Namada validators/Ethereum bridge
         ref_fflags:
           - "default"
 
