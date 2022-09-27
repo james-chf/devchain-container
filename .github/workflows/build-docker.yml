@@ -21,6 +21,16 @@ jobs:
           - "b2fc5c1ab3586348539a2a0d2360dc6efb03a0c0" # https://github.com/anoma/namada/pull/471 - secp keys for Namada validators/Ethereum bridge
         ref_fflags:
           - "default"
+        include:
+          - ref: "v0.7.1"
+            tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
+          - ref: "08b4f5d6ab5e237b41f881aa2a9f9a35e99877a7"
+            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
+          - ref: "b2fc5c1ab3586348539a2a0d2360dc6efb03a0c0"
+            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
 
     steps:
       - name: Checkout repository
@@ -59,5 +69,7 @@ jobs:
           build-args: |
             REF=${{ matrix.ref }}
             ANOMA_REF_FFLAGS=${{ matrix.ref_fflags }}
+            TENDERMINT_ARM64_URL=${{ matrix.tendermint_arm64_url }}
+            TENDERMINT_AMD64_URL=${{ matrix.tendermint_amd64_url }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
