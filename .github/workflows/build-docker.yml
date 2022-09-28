@@ -17,7 +17,7 @@ jobs:
       matrix:
         ref:
           - "v0.7.1"
-          - "08b4f5d6ab5e237b41f881aa2a9f9a35e99877a7" # eth-bridge-integration 2022-09-27
+          - "964dff223f80273613759d61bc2805096bcb86c2" # eth-bridge-integration 2022-09-28
           - "dec6c653acf069779a0f69b2c86e8f309fba1d5b" # james/ethbridge/experimental 2022-09-28
         ref_fflags:
           - "default"
@@ -25,10 +25,12 @@ jobs:
           - ref: "v0.7.1"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
-          - ref: "08b4f5d6ab5e237b41f881aa2a9f9a35e99877a7"
+          - ref: "964dff223f80273613759d61bc2805096bcb86c2"
+            base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
           - ref: "dec6c653acf069779a0f69b2c86e8f309fba1d5b"
+            base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
 
@@ -68,6 +70,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             REF=${{ matrix.ref }}
+            BASE_POINT=${{ matrix.base_point }}
             ANOMA_REF_FFLAGS=${{ matrix.ref_fflags }}
             TENDERMINT_ARM64_URL=${{ matrix.tendermint_arm64_url }}
             TENDERMINT_AMD64_URL=${{ matrix.tendermint_amd64_url }}
