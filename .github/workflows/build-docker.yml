@@ -23,19 +23,23 @@ jobs:
         ref_fflags:
           - "default"
         include:
-          - ref: "v0.7.1"
+          - tag: "v0.7.1"
+            ref: "v0.7.1"
             base_point: "v0.7.1"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
-          - ref: "964dff223f80273613759d61bc2805096bcb86c2"
+          - tag: "ethbridge-2022-09-28"
+            ref: "964dff223f80273613759d61bc2805096bcb86c2"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
-          - ref: "dec6c653acf069779a0f69b2c86e8f309fba1d5b"
+          - tag: "ethbridge-experimental-2022-09-28"
+            ref: "dec6c653acf069779a0f69b2c86e8f309fba1d5b"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
-          - ref: "e2c07f2e3468828f0d9f61e525743fd514e1b3a6"
+          - tag: "pr531"
+            ref: "e2c07f2e3468828f0d9f61e525743fd514e1b3a6"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
@@ -65,6 +69,7 @@ jobs:
           tags: |
             type=sha
             type=raw,value=${{ matrix.ref }}
+            type=raw,value=${{ matrix.tag }}
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v3
