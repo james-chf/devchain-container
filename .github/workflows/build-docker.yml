@@ -19,6 +19,7 @@ jobs:
           - "v0.7.1"
           - "964dff223f80273613759d61bc2805096bcb86c2" # eth-bridge-integration 2022-09-28
           - "dec6c653acf069779a0f69b2c86e8f309fba1d5b" # james/ethbridge/experimental 2022-09-28
+          - "e2c07f2e3468828f0d9f61e525743fd514e1b3a6" # james/ethbridge/fork-patching 2022-09-30
         ref_fflags:
           - "default"
         include:
@@ -31,6 +32,10 @@ jobs:
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
           - ref: "dec6c653acf069779a0f69b2c86e8f309fba1d5b"
+            base_point: "964dff223f80273613759d61bc2805096bcb86c2"
+            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
+          - ref: "e2c07f2e3468828f0d9f61e525743fd514e1b3a6"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
