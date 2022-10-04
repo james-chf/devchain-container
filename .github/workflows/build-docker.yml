@@ -19,22 +19,23 @@ jobs:
           - "v0.7.1"
           - "a70eafb2a724f014eda0323a09ccb80af994cd8c" # eth-bridge-integration 2022-10-04
           - "dec6c653acf069779a0f69b2c86e8f309fba1d5b" # james/ethbridge/experimental 2022-09-28
-        ref_fflags:
-          - "default"
         include:
           - tag: "v0.7.1"
             base_point: "v0.7.1"
             ref: "v0.7.1"
+            ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
           - tag: "ethbridge-2022-09-28"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             ref: "964dff223f80273613759d61bc2805096bcb86c2"
+            ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
           - tag: "ethbridge-experimental-2022-09-28"
             base_point: "964dff223f80273613759d61bc2805096bcb86c2"
             ref: "dec6c653acf069779a0f69b2c86e8f309fba1d5b"
+            ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
 
