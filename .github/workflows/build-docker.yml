@@ -15,10 +15,10 @@ jobs:
       packages: write
     strategy:
       matrix:
-        ref:
+        tag:
           - "v0.7.1"
-          - "a70eafb2a724f014eda0323a09ccb80af994cd8c" # eth-bridge-integration 2022-10-04
-          - "51285df62c003cba436ddad36129b265f87c49d8" # james/ethbridge/experimental 2022-10-04
+          - "ethbridge-2022-10-04"
+          - "ethbridge-experimental-2022-10-04"
         include:
           - tag: "v0.7.1"
             base_point: "v0.7.1"
