@@ -16,9 +16,16 @@ jobs:
     strategy:
       matrix:
         tag:
+          - "main"
           - "v0.7.1"
           - "ethbridge-2022-10-13"
         include:
+          - tag: "main"
+            base_point: "v0.8.0"
+            ref: "f25f33538aabe555abd32ea4acf643127aa5f80b" # 2022-10-19
+            ref_fflags: "default"
+            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
           - tag: "v0.7.1"
             base_point: "v0.7.1"
             ref: "v0.7.1"
