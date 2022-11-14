@@ -16,28 +16,21 @@ jobs:
     strategy:
       matrix:
         tag:
-          - "main"
-          - "v0.8.1"
-          - "ethbridge-2022-10-13"
+          - "v0.9.0"
+          - "ethbridge-2022-11-14"
         include:
-          - tag: "main"
-            base_point: "v0.8.1"
-            ref: "43c52484ccbd4b2d76cae3b97657477e5297d7fa" # 2022-10-24
+          - tag: "v0.9.0"
+            base_point: "v0.9.0"
+            ref: "v0.9.0"
             ref_fflags: "default"
-            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
-            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
-          - tag: "v0.8.1"
-            base_point: "v0.8.1"
-            ref: "v0.8.1"
+            tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_amd64.tar.gz"
+          - tag: "ethbridge-2022-11-14"
+            base_point: "fdd211a0d823a72884b5864ac84e2a83e986762e" # ethbridge-2022-11-14
+            ref: "fdd211a0d823a72884b5864ac84e2a83e986762e"
             ref_fflags: "default"
-            tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
-            tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
-          - tag: "ethbridge-2022-10-13"
-            base_point: "9890b42c6fd7edba72317f46768ca0969bdd6b96" # ethbridge-2022-10-10
-            ref: "44b4913ae9873e947f83718136557f77030e22f7"
-            ref_fflags: "default"
-            tendermint_arm64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_arm64.tar.gz"
-            tendermint_amd64_url: "https://github.com/tendermint/tendermint/releases/download/v0.37.0-alpha.2/tendermint_0.37.0-alpha.2_linux_amd64.tar.gz"
+            tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_arm64.tar.gz"
+            tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_amd64.tar.gz"
 
     steps:
       - name: Checkout repository
