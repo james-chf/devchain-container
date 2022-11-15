@@ -88,8 +88,8 @@ RUN cargo build \
     --bin namadan
 
 FROM ref AS tendermint-downloader
-ARG TENDERMINT_ARM64_URL="https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_arm64.tar.gz"
-ARG TENDERMINT_AMD64_URL="https://github.com/heliaxdev/tendermint/releases/download/v0.1.1-abcipp/tendermint_0.1.1-abcipp_linux_amd64.tar.gz"
+ARG TENDERMINT_ARM64_URL="https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_arm64.tar.gz"
+ARG TENDERMINT_AMD64_URL="https://github.com/heliaxdev/tendermint/releases/download/v0.1.2-abciplus/tendermint_0.1.2-abciplus_linux_amd64.tar.gz"
 COPY --chmod=0755 download_tendermint.sh /usr/local/bin
 RUN download_tendermint.sh
 
