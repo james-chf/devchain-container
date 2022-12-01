@@ -16,12 +16,12 @@ jobs:
     strategy:
       matrix:
         tag:
-          - "v0.10.1"
+          - "v0.11.0"
           - "ethbridge-v0.10.1"
         include:
-          - tag: "v0.10.1"
-            base_point: "v0.10.1"
-            ref: "v0.10.1"
+          - tag: "v0.11.0"
+            base_point: "v0.11.0"
+            ref: "v0.11.0"
             ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_amd64.tar.gz"
