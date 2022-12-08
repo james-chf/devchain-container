@@ -70,7 +70,7 @@ jobs:
           build-args: |
             REF=${{ matrix.ref }}
             BASE_POINT=${{ matrix.base_point }}
-            ANOMA_REF_FFLAGS=${{ matrix.ref_fflags }}
+            NAMADA_REF_FFLAGS=${{ matrix.ref_fflags }}
             TENDERMINT_ARM64_URL=${{ matrix.tendermint_arm64_url }}
             TENDERMINT_AMD64_URL=${{ matrix.tendermint_amd64_url }}
           cache-from: type=gha
