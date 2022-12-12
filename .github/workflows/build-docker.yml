@@ -17,7 +17,7 @@ jobs:
       matrix:
         tag:
           - "v0.11.0"
-          - "ethbridge-v0.10.1"
+          - "ethbridge-v0.11.0"
         include:
           - tag: "v0.11.0"
             base_point: "v0.11.0"
@@ -25,9 +25,9 @@ jobs:
             ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_amd64.tar.gz"
-          - tag: "ethbridge-v0.10.1"
-            base_point: "10e283f16a3c06a4999259c5ad1db0d78fa04788" # 2022-11-28
-            ref: "10e283f16a3c06a4999259c5ad1db0d78fa04788"
+          - tag: "ethbridge-v0.11.0"
+            base_point: "926f47bf80d86a12c5ba2b044c113a31bc77deaf" # 2022-12-12
+            ref: "926f47bf80d86a12c5ba2b044c113a31bc77deaf"
             ref_fflags: "default"
             tendermint_arm64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_arm64.tar.gz"
             tendermint_amd64_url: "https://github.com/heliaxdev/tendermint/releases/download/v0.1.4-abciplus/tendermint_0.1.4-abciplus_linux_amd64.tar.gz"
